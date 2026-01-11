@@ -1,5 +1,7 @@
 local M = {}
 
+local utils = require("gruber-darker.utils")
+
 M.defaults = {
 }
 
@@ -22,7 +24,7 @@ M.load = function()
 
   for _, section in ipairs(sections) do
     for _, highlight in pairs(section) do
-      vim.api.nvim_set_hl(0, highlight.name, highlight.opts)
+      utils.set_hl(highlight)
     end
   end
 end
