@@ -21,8 +21,8 @@ M.load = function()
   }
 
   for _, section in ipairs(sections) do
-    for group, highlight in pairs(section) do
-      vim.api.nvim_set_hl(0, group, highlight)
+    for _, highlight in pairs(section) do
+      vim.api.nvim_set_hl(0, highlight.name, highlight.opts)
     end
   end
 end
