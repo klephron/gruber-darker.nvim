@@ -1,6 +1,6 @@
 local M = {}
--- https://github.com/rexim/gruber-darker-theme/blob/master/gruber-darker-theme.el
 
+-- https://github.com/rexim/gruber-darker-theme/blob/master/gruber-darker-theme.el
 M["gruber-darker-fg"] = "#e4e4ef"
 M["gruber-darker-fg+1"] = "#f4f4ff"
 M["gruber-darker-fg+2"] = "#f5f5f5"
