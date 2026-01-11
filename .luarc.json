@@ -2,5 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json",
   "diagnostics.globals": ["vim"],
   "format.enable": true,
-  "format.defaultConfig": {}
+  "format.defaultConfig": {
+    "max_line_length": "160"
+  }
 }

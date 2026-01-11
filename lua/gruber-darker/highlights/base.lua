@@ -1,9 +1,9 @@
-local M         = {}
+local M = {}
+
 
 local Highlight = require("gruber-darker.highlight")
-
 local colors    = require("gruber-darker.colors")
-local bold      = require("gruber-darker.utils").bold
+local with      = require("gruber-darker.utils").with
 
 
 M["GruberDarkerFg"]        = Highlight.new("GruberDarkerFg", { fg = colors["gruber-darker-fg"] })
@@ -30,27 +30,27 @@ M["GruberDarkerNiagara"]   = Highlight.new("GruberDarkerNiagara", { fg = colors[
 M["GruberDarkerWisteria"]  = Highlight.new("GruberDarkerWisteria", { fg = colors["gruber-darker-wisteria"] })
 
 
-M["GruberDarkerFgBold"]        = Highlight.new("GruberDarkerFgBold", bold(M["GruberDarkerFg"].opts))
-M["GruberDarkerFgP1Bold"]      = Highlight.new("GruberDarkerFgP1Bold", bold(M["GruberDarkerFgP1"].opts))
-M["GruberDarkerFgP2Bold"]      = Highlight.new("GruberDarkerFgP2Bold", bold(M["GruberDarkerFgP2"].opts))
-M["GruberDarkerWhiteBold"]     = Highlight.new("GruberDarkerWhiteBold", bold(M["GruberDarkerWhite"].opts))
-M["GruberDarkerBlackBold"]     = Highlight.new("GruberDarkerBlackBold", bold(M["GruberDarkerBlack"].opts))
-M["GruberDarkerBgM1Bold"]      = Highlight.new("GruberDarkerBgM1Bold", bold(M["GruberDarkerBgM1"].opts))
-M["GruberDarkerBgBold"]        = Highlight.new("GruberDarkerBgBold", bold(M["GruberDarkerBg"].opts))
-M["GruberDarkerBgP1Bold"]      = Highlight.new("GruberDarkerBgP1Bold", bold(M["GruberDarkerBgP1"].opts))
-M["GruberDarkerBgP2Bold"]      = Highlight.new("GruberDarkerBgP2Bold", bold(M["GruberDarkerBgP2"].opts))
-M["GruberDarkerBgP3Bold"]      = Highlight.new("GruberDarkerBgP3Bold", bold(M["GruberDarkerBgP3"].opts))
-M["GruberDarkerBgP4Bold"]      = Highlight.new("GruberDarkerBgP4Bold", bold(M["GruberDarkerBgP4"].opts))
-M["GruberDarkerRedM1Bold"]     = Highlight.new("GruberDarkerRedM1Bold", bold(M["GruberDarkerRedM1"].opts))
-M["GruberDarkerRedBold"]       = Highlight.new("GruberDarkerRedBold", bold(M["GruberDarkerRed"].opts))
-M["GruberDarkerRedP1Bold"]     = Highlight.new("GruberDarkerRedP1Bold", bold(M["GruberDarkerRedP1"].opts))
-M["GruberDarkerGreenBold"]     = Highlight.new("GruberDarkerGreenBold", bold(M["GruberDarkerGreen"].opts))
-M["GruberDarkerYellowBold"]    = Highlight.new("GruberDarkerYellowBold", bold(M["GruberDarkerYellow"].opts))
-M["GruberDarkerBrownBold"]     = Highlight.new("GruberDarkerBrownBold", bold(M["GruberDarkerBrown"].opts))
-M["GruberDarkerQuartzBold"]    = Highlight.new("GruberDarkerQuartzBold", bold(M["GruberDarkerQuartz"].opts))
-M["GruberDarkerNiagaraM2Bold"] = Highlight.new("GruberDarkerNiagaraM2Bold", bold(M["GruberDarkerNiagaraM2"].opts))
-M["GruberDarkerNiagaraM1Bold"] = Highlight.new("GruberDarkerNiagaraM1Bold", bold(M["GruberDarkerNiagaraM1"].opts))
-M["GruberDarkerNiagaraBold"]   = Highlight.new("GruberDarkerNiagaraBold", bold(M["GruberDarkerNiagara"].opts))
-M["GruberDarkerWisteriaBold"]  = Highlight.new("GruberDarkerWisteriaBold", bold(M["GruberDarkerWisteria"].opts))
+M["GruberDarkerFgBold"]        = Highlight.new("GruberDarkerFgBold", with(M["GruberDarkerFg"], { bold = true }))
+M["GruberDarkerFgP1Bold"]      = Highlight.new("GruberDarkerFgP1Bold", with(M["GruberDarkerFgP1"], { bold = true }))
+M["GruberDarkerFgP2Bold"]      = Highlight.new("GruberDarkerFgP2Bold", with(M["GruberDarkerFgP2"], { bold = true }))
+M["GruberDarkerWhiteBold"]     = Highlight.new("GruberDarkerWhiteBold", with(M["GruberDarkerWhite"], { bold = true }))
+M["GruberDarkerBlackBold"]     = Highlight.new("GruberDarkerBlackBold", with(M["GruberDarkerBlack"], { bold = true }))
+M["GruberDarkerBgM1Bold"]      = Highlight.new("GruberDarkerBgM1Bold", with(M["GruberDarkerBgM1"], { bold = true }))
+M["GruberDarkerBgBold"]        = Highlight.new("GruberDarkerBgBold", with(M["GruberDarkerBg"], { bold = true }))
+M["GruberDarkerBgP1Bold"]      = Highlight.new("GruberDarkerBgP1Bold", with(M["GruberDarkerBgP1"], { bold = true }))
+M["GruberDarkerBgP2Bold"]      = Highlight.new("GruberDarkerBgP2Bold", with(M["GruberDarkerBgP2"], { bold = true }))
+M["GruberDarkerBgP3Bold"]      = Highlight.new("GruberDarkerBgP3Bold", with(M["GruberDarkerBgP3"], { bold = true }))
+M["GruberDarkerBgP4Bold"]      = Highlight.new("GruberDarkerBgP4Bold", with(M["GruberDarkerBgP4"], { bold = true }))
+M["GruberDarkerRedM1Bold"]     = Highlight.new("GruberDarkerRedM1Bold", with(M["GruberDarkerRedM1"], { bold = true }))
+M["GruberDarkerRedBold"]       = Highlight.new("GruberDarkerRedBold", with(M["GruberDarkerRed"], { bold = true }))
+M["GruberDarkerRedP1Bold"]     = Highlight.new("GruberDarkerRedP1Bold", with(M["GruberDarkerRedP1"], { bold = true }))
+M["GruberDarkerGreenBold"]     = Highlight.new("GruberDarkerGreenBold", with(M["GruberDarkerGreen"], { bold = true }))
+M["GruberDarkerYellowBold"]    = Highlight.new("GruberDarkerYellowBold", with(M["GruberDarkerYellow"], { bold = true }))
+M["GruberDarkerBrownBold"]     = Highlight.new("GruberDarkerBrownBold", with(M["GruberDarkerBrown"], { bold = true }))
+M["GruberDarkerQuartzBold"]    = Highlight.new("GruberDarkerQuartzBold", with(M["GruberDarkerQuartz"], { bold = true }))
+M["GruberDarkerNiagaraM2Bold"] = Highlight.new("GruberDarkerNiagaraM2Bold", with(M["GruberDarkerNiagaraM2"], { bold = true }))
+M["GruberDarkerNiagaraM1Bold"] = Highlight.new("GruberDarkerNiagaraM1Bold", with(M["GruberDarkerNiagaraM1"], { bold = true }))
+M["GruberDarkerNiagaraBold"]   = Highlight.new("GruberDarkerNiagaraBold", with(M["GruberDarkerNiagara"], { bold = true }))
+M["GruberDarkerWisteriaBold"]  = Highlight.new("GruberDarkerWisteriaBold", with(M["GruberDarkerWisteria"], { bold = true }))
 
 return M

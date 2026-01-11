@@ -1,9 +1,10 @@
 local M = {}
 
+---@param highlight Highlight
 ---@param opts HighlightOpts
 ---@return HighlightOpts
-M.bold = function(opts)
-  opts = vim.tbl_extend('force', opts, { bold = true })
+M.with = function(highlight, opts)
+  opts = vim.tbl_extend('force', highlight.opts, opts)
   return opts
 end
 
