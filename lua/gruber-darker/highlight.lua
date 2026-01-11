@@ -4,6 +4,9 @@ local M = {}
 ---@field fg? string
 ---@field bg? string
 ---@field bold? boolean
+---@field underline? boolean
+---@field undercurl? boolean
+---@field reverse? boolean
 ---@field link? Highlight
 
 ---@class Highlight

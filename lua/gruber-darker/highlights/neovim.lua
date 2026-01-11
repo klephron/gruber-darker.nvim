@@ -1,88 +1,120 @@
 local M = {}
 
 
+local c         = require("gruber-darker.colors")
 local Highlight = require("gruber-darker.highlight")
-local hl_base   = require("gruber-darker.highlights.base")
 
 
-M["ColorColumn"]                 = Highlight.new("ColorColumn", {})
-M["Conceal"]                     = Highlight.new("Conceal", {})
-M["CurSearch"]                   = Highlight.new("CurSearch", {})
-M["Cursor"]                      = Highlight.new("Cursor", {})
-M["lCursor"]                     = Highlight.new("lCursor", {})
-M["CursorIM"]                    = Highlight.new("CursorIM", {})
-M["CursorColumn"]                = Highlight.new("CursorColumn", {})
-M["CursorLine"]                  = Highlight.new("CursorLine", {})
-M["Directory"]                   = Highlight.new("Directory", {})
-M["DiffAdd"]                     = Highlight.new("DiffAdd", {})
-M["DiffChange"]                  = Highlight.new("DiffChange", {})
-M["DiffDelete"]                  = Highlight.new("DiffDelete", {})
-M["DiffText"]                    = Highlight.new("DiffText", {})
-M["EndOfBuffer"]                 = Highlight.new("EndOfBuffer", {})
-M["TermCursor"]                  = Highlight.new("TermCursor", {})
-M["ErrorMsg"]                    = Highlight.new("ErrorMsg", {})
-M["WinSeparator"]                = Highlight.new("WinSeparator", {})
-M["Folded"]                      = Highlight.new("Folded", {})
-M["SignColumn"]                  = Highlight.new("SignColumn", {})
-M["IncSearch"]                   = Highlight.new("IncSearch", {})
-M["Substitute"]                  = Highlight.new("Substitute", {})
-M["LineNr"]                      = Highlight.new("LineNr", {})
-M["LineNrAbove"]                 = Highlight.new("LineNrAbove", {})
-M["LineNrBelow"]                 = Highlight.new("LineNrBelow", {})
-M["CursorLineNr"]                = Highlight.new("CursorLineNr", {})
-M["CursorLineFold"]              = Highlight.new("CursorLineFold", {})
-M["CursorLineSign"]              = Highlight.new("CursorLineSign", {})
-M["MatchParen"]                  = Highlight.new("MatchParen", {})
-M["ModeMsg"]                     = Highlight.new("ModeMsg", {})
-M["MsgArea"]                     = Highlight.new("MsgArea", {})
-M["MsgSeparator"]                = Highlight.new("MsgSeparator", {})
-M["MoreMsg"]                     = Highlight.new("MoreMsg", {})
-M["NonText"]                     = Highlight.new("NonText", {})
-M["Normal"]                      = Highlight.new("Normal", {})
-M["NormalFloat"]                 = Highlight.new("NormalFloat", {})
-M["FloatBorder"]                 = Highlight.new("FloatBorder", {})
-M["FloatTitle"]                  = Highlight.new("FloatTitle", {})
-M["FloatFooter"]                 = Highlight.new("FloatFooter", {})
-M["NormalNC"]                    = Highlight.new("NormalNC", {})
-M["Pmenu"]                       = Highlight.new("Pmenu", {})
-M["PmenuSel"]                    = Highlight.new("PmenuSel", {})
-M["PmenuKind"]                   = Highlight.new("PmenuKind", {})
-M["PmenuKindSel"]                = Highlight.new("PmenuKindSel", {})
-M["PmenuExtra"]                  = Highlight.new("PmenuExtra", {})
-M["PmenuExtraSel"]               = Highlight.new("PmenuExtraSel", {})
-M["PmenuSbar"]                   = Highlight.new("PmenuSbar", {})
-M["PmenuThumb"]                  = Highlight.new("PmenuThumb", {})
-M["PmenuMatch"]                  = Highlight.new("PmenuMatch", {})
-M["PmenuMatchSel"]               = Highlight.new("PmenuMatchSel", {})
-M["ComplMatchIns"]               = Highlight.new("ComplMatchIns", {})
-M["Question"]                    = Highlight.new("Question", {})
-M["QuickFixLine"]                = Highlight.new("QuickFixLine", {})
-M["Search"]                      = Highlight.new("Search", {})
-M["SnippetTabstop"]              = Highlight.new("SnippetTabstop", {})
-M["SpecialKey"]                  = Highlight.new("SpecialKey", {})
-M["SpellBad"]                    = Highlight.new("SpellBad", {})
-M["SpellCap"]                    = Highlight.new("SpellCap", {})
-M["SpellLocal"]                  = Highlight.new("SpellLocal", {})
-M["SpellRare"]                   = Highlight.new("SpellRare", {})
-M["StatusLine"]                  = Highlight.new("StatusLine", {})
-M["StatusLineNC"]                = Highlight.new("StatusLineNC", {})
-M["StatusLineTerm"]              = Highlight.new("StatusLineTerm", {})
-M["StatusLineTermNC"]            = Highlight.new("StatusLineTermNC", {})
-M["TabLine"]                     = Highlight.new("TabLine", {})
-M["TabLineFill"]                 = Highlight.new("TabLineFill", {})
-M["TabLineSel"]                  = Highlight.new("TabLineSel", {})
-M["Title"]                       = Highlight.new("Title", {})
-M["Visual"]                      = Highlight.new("Visual", {})
-M["VisualNOS"]                   = Highlight.new("VisualNOS", {})
-M["WarningMsg"]                  = Highlight.new("WarningMsg", {})
-M["Whitespace"]                  = Highlight.new("Whitespace", {})
-M["WildMenu"]                    = Highlight.new("WildMenu", {})
-M["WinBar"]                      = Highlight.new("WinBar", {})
-M["WinBarNC"]                    = Highlight.new("WinBarNC", {})
+M["ColorColumn"]                 = Highlight.new("ColorColumn", { bg = c["bg+2"] })
 
-M["Menu"]                        = Highlight.new("Menu", {})
-M["Scrollbar"]                   = Highlight.new("Scrollbar", {})
-M["Tooltip"]                     = Highlight.new("Tooltip", {})
+M["Conceal"]                     = Highlight.new("Conceal", { fg = c["fg"], bg = c["bg"] })
+
+M["CurSearch"]                   = Highlight.new("CurSearch", { fg = c["black"], bg = c["fg+2"] })
+
+M["Cursor"]                      = Highlight.new("Cursor", { bg = c["yellow"] })
+M["lCursor"]                     = Highlight.new("lCursor", { link = M["Cursor"] })
+M["CursorIM"]                    = Highlight.new("CursorIM", { link = M["Cursor"] })
+M["CursorColumn"]                = Highlight.new("CursorColumn", { bg = c["bg+2"] })
+M["CursorLine"]                  = Highlight.new("CursorLine", { bg = c["bg+1"] })
+M["Directory"]                   = Highlight.new("Directory", { fg = c["niagara"], bold = true })
+
+M["DiffAdd"]                     = Highlight.new("DiffAdd", { fg = c["green"], bg = nil })
+M["DiffChange"]                  = Highlight.new("DiffChange", { fg = c["yellow"] })
+M["DiffDelete"]                  = Highlight.new("DiffDelete", { fg = c["red+1"] })
+M["DiffText"]                    = Highlight.new("DiffText", { fg = c["yellow"] })
+
+M["EndOfBuffer"]                 = Highlight.new("EndOfBuffer", { fg = c["bg+4"], bg = nil })
+M["TermCursor"]                  = Highlight.new("TermCursor", { link = M["Cursor"] })
+
+M["ErrorMsg"]                    = Highlight.new("ErrorMsg", { fg = c["white"], bg = c["red"] })
+
+M["WinSeparator"]                = Highlight.new("WinSeparator", { fg = c["bg+2"], bold = true })
+
+M["Folded"]                      = Highlight.new("Folded", { fg = c["brown"], bg = c["bg+2"], italic = true })
+M["FoldColumn"]                  = Highlight.new("FoldColumn", { fg = c["brown"], bg = c["bg+2"] })
+M["SignColumn"]                  = Highlight.new("SignColumn", { fg = c["bg+2"], bg = c.none })
+
+M["IncSearch"]                   = Highlight.new("IncSearch", { link = M["CurSearch"] })
+M["Substitute"]                  = Highlight.new("Substitute", { link = M["CurSearch"] })
+
+M["LineNr"]                      = Highlight.new("LineNr", { fg = c["bg+4"] })
+M["LineNrAbove"]                 = Highlight.new("LineNrAbove", { link = M["LineNr"] })
+M["LineNrBelow"]                 = Highlight.new("LineNrBelow", { link = M["LineNr"] })
+
+M["CursorLineNr"]                = Highlight.new("CursorLineNr", { fg = c["yellow"] })
+M["CursorLineFold"]              = Highlight.new("CursorLineFold", { link = M["FoldColumn"] })
+M["CursorLineSign"]              = Highlight.new("CursorLineSign", { link = M["SignColumn"] })
+
+M["MatchParen"]                  = Highlight.new("MatchParen", { fg = c["fg"], bg = c["wisteria"] })
+
+M["ModeMsg"]                     = Highlight.new("ModeMsg", { fg = c["fg+2"] })
+M["MsgArea"]                     = Highlight.new("MsgArea", { fg = c["bg"] })
+M["MsgSeparator"]                = Highlight.new("MsgSeparator", { link = M["StatusLine"] })
+M["MoreMsg"]                     = Highlight.new("MoreMsg", { fg = c["fg+2"] })
+
+M["NonText"]                     = Highlight.new("NonText", { link = M["EndOfBuffer"] })
+M["Normal"]                      = Highlight.new("Normal", { fg = c["fg"], bg = c["bg"] })
+M["NormalFloat"]                 = Highlight.new("NormalFloat", { fg = c["fg"], bg = c["bg+1"] })
+
+M["FloatBorder"]                 = Highlight.new("FloatBorder", { fg = c["bg+4"] })
+M["FloatTitle"]                  = Highlight.new("FloatTitle", { link = M["Title"] })
+M["FloatFooter"]                 = Highlight.new("FloatFooter", { link = M["FloatTitle"] })
+
+M["NormalNC"]                    = Highlight.new("NormalNC", { link = M["Normal"] })
+
+M["Pmenu"]                       = Highlight.new("Pmenu", { fg = c["fg"], bg = c["bg+1"] })
+M["PmenuSel"]                    = Highlight.new("PmenuSel", { fg = c["fg"], bg = c["bg+2"] })
+M["PmenuKind"]                   = Highlight.new("PmenuKind", { link = M["Pmenu"] })
+M["PmenuKindSel"]                = Highlight.new("PmenuKindSel", { link = M["PmenuSel"] })
+M["PmenuExtra"]                  = Highlight.new("PmenuExtra", { link = M["Pmenu"] })
+M["PmenuExtraSel"]               = Highlight.new("PmenuExtraSel", { link = M["PmenuSel"] })
+M["PmenuSbar"]                   = Highlight.new("PmenuSbar", { bg = c["bg"] })
+M["PmenuThumb"]                  = Highlight.new("PmenuThumb", { bg = c["bg"] })
+M["PmenuMatch"]                  = Highlight.new("PmenuMatch", { bold = true })
+M["PmenuMatchSel"]               = Highlight.new("PmenuMatchSel", { bold = true })
+
+M["ComplMatchIns"]               = Highlight.new("ComplMatchIns", { fg = nil, bg = nil })
+
+M["Question"]                    = Highlight.new("Question", { fg = c["niagara"] })
+M["QuickFixLine"]                = Highlight.new("QuickFixLine", { bg = c["bg+2"], bold = true })
+
+M["Search"]                      = Highlight.new("Search", { fg = c["niagara-1"], bg = c["fg+1"] })
+
+M["SnippetTabstop"]              = Highlight.new("SnippetTabstop", { link = M["Visual"] })
+
+M["SpecialKey"]                  = Highlight.new("SpecialKey", { fg = c["fg+2"] })
+
+M["SpellBad"]                    = Highlight.new("SpellBad", { fg = c["red"], undercurl = true })
+M["SpellCap"]                    = Highlight.new("SpellCap", { undercurl = true })
+M["SpellLocal"]                  = Highlight.new("SpellLocal", { undercurl = true })
+M["SpellRare"]                   = Highlight.new("SpellRare", { undercurl = true })
+
+M["StatusLine"]                  = Highlight.new("StatusLine", { fg = c["white"], bg = c["bg+1"] })
+M["StatusLineNC"]                = Highlight.new("StatusLineNC", { fg = c.quartz, bg = c["bg+1"] })
+M["StatusLineTerm"]              = Highlight.new("StatusLineTerm", { link = M["StatusLine"] })
+M["StatusLineTermNC"]            = Highlight.new("StatusLineTermNC", { link = M["StatusLineNC"] })
+
+M["TabLine"]                     = Highlight.new("TabLine", { bg = nil })
+M["TabLineFill"]                 = Highlight.new("TabLineFill", { fg = c["bg+4"], bg = c["bg+1"] })
+M["TabLineSel"]                  = Highlight.new("TabLineSel", { fg = c.yellow, bg = nil, bold = true })
+
+M["Title"]                       = Highlight.new("Title", { fg = c["quartz"] })
+
+M["Visual"]                      = Highlight.new("Visual", { bg = c["bg+2"], reverse = true })
+M["VisualNOS"]                   = Highlight.new("VisualNOS", { fg = c["red"] })
+
+M["WarningMsg"]                  = Highlight.new("WarningMsg", { fg = c["red"] })
+
+M["Whitespace"]                  = Highlight.new("Whitespace", { fg = c["bg+4"], bg = nil })
+
+M["WildMenu"]                    = Highlight.new("WildMenu", { fg = c["black"], bg = c["yellow"] })
+
+M["WinBar"]                      = Highlight.new("WinBar", { bg = c["bg"] })
+M["WinBarNC"]                    = Highlight.new("WinBarNC", { bg = c["bg"] })
+
+-- M["Menu"]                        = Highlight.new("Menu", { link = M["Pmenu"] })
+-- M["Scrollbar"]                   = Highlight.new("Scrollbar", { link = M["PmenuSbar"] })
+-- M["Tooltip"]                     = Highlight.new("Tooltip", { link = M["Pmenu"]})
 
 M["Comment"]                     = Highlight.new("Comment", {})
 M["Constant"]                    = Highlight.new("Constant", {})
