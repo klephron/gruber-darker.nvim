@@ -1,12 +1,10 @@
 local M = {}
 
 local utils = require("gruber-darker.utils")
-
-M.defaults = {
-}
+local config = require("gruber-darker.config")
 
 M.setup = function(opts)
-  opts = vim.tbl_deep_extend("force", M.defaults, opts or {})
+  config.current = vim.tbl_deep_extend("force", config.defaults, opts or {})
 end
 
 M.load = function()
