@@ -5,3 +5,4 @@ Overriden [`gruber-darker.nvim`](https://github.com/blazkowolf/gruber-darker.nvi
 ## Acknowledgement
 
 - https://github.com/blazkowolf/gruber-darker.nvim
+- https://github.com/rexim/gruber-darker-theme
