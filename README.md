@@ -17,12 +17,12 @@ local M = {
     underline = true,
     strikethrough = true,
     italic = {
-      string = false,
-      char = false,
-      comment = false,
-      operator = false,
-      fold = false,
-      text = false,
+      string = true,
+      char = true,
+      comment = true,
+      operator = true,
+      fold = true,
+      text = true,
     }
   }
 }
