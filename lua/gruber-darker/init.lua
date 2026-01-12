@@ -1,6 +1,5 @@
 local M = {}
 
-local utils = require("gruber-darker.utils")
 local config = require("gruber-darker.config")
 
 M.setup = function(opts)
@@ -16,14 +15,14 @@ M.load = function()
   vim.o.termguicolors = true
 
   local sections = {
-    require("gruber-darker.highlights.base"),
-    require("gruber-darker.highlights.neovim"),
-    require("gruber-darker.highlights.telescope"),
+    require("gruber-darker.groups.base"),
+    require("gruber-darker.groups.neovim"),
+    require("gruber-darker.groups.telescope"),
   }
 
   for _, section in ipairs(sections) do
-    for _, highlight in pairs(section) do
-      utils.set_hl(highlight)
+    for group, opts in pairs(section) do
+      vim.api.nvim_set_hl(0, group, opts)
     end
   end
 end

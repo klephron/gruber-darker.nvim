@@ -1,14 +1,13 @@
-local M                    = {}
+local M = {}
 
-local cfg                  = require("gruber-darker.config").current
-local c                    = require("gruber-darker.colors")
-local neovim               = require("gruber-darker.highlights.neovim")
-local Highlight            = require("gruber-darker.highlight")
+local c = require("gruber-darker.colors")
+local o = require("gruber-darker.config").opts
 
-M["TelescopeNormal"]       = Highlight.new("TelescopeNormal", { link = neovim["Normal"] })
-M["TelescopeMatching"]     = Highlight.new("TelescopeMatching", { fg = c["red"], bold = cfg.bold })
-M["TelescopeBorder"]       = Highlight.new("TelescopeBorder", { link = neovim["FloatBorder"] })
-M["TelescopePromptPrefix"] = Highlight.new("TelescopePromptPrefix", { link = neovim["DiagnosticInfo"] })
-M["TelescopeTitle"]        = Highlight.new("TelescopeTitle", { fg = c["fg"] })
+
+M["TelescopeNormal"]       = { link = "Normal" }
+M["TelescopeMatching"]     = { fg = c["red"], bold = o.bold }
+M["TelescopeBorder"]       = { link = "FloatBorder" }
+M["TelescopePromptPrefix"] = { link = "DiagnosticInfo" }
+M["TelescopeTitle"]        = { fg = c["fg"] }
 
 return M

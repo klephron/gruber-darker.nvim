@@ -1,6 +1,8 @@
 local M = {}
 
 -- https://github.com/rexim/gruber-darker-theme/blob/master/gruber-darker-theme.el
+M["none"] = "NONE"
+
 M["fg"] = "#e4e4ef"
 M["fg+1"] = "#f4f4ff"
 M["fg+2"] = "#f5f5f5"

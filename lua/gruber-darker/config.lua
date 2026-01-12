@@ -15,6 +15,6 @@ M.defaults = {
   },
 }
 
-M.current = M.defaults
+M.opts = M.defaults
 
 return M
