@@ -18,6 +18,7 @@ M.load = function()
   local sections = {
     require("gruber-darker.highlights.base"),
     require("gruber-darker.highlights.neovim"),
+    require("gruber-darker.highlights.telescope"),
   }
 
   for _, section in ipairs(sections) do
