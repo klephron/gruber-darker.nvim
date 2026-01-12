@@ -18,6 +18,7 @@ M.load = function()
     require("gruber-darker.groups.base"),
     require("gruber-darker.groups.neovim"),
     require("gruber-darker.groups.telescope"),
+    require("gruber-darker.groups.treesitter"),
   }
 
   for _, section in ipairs(sections) do
