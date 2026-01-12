@@ -3,9 +3,11 @@ local M = {}
 ---@class HighlightOpts
 ---@field fg? string
 ---@field bg? string
+---@field sp? string
 ---@field bold? boolean
 ---@field underline? boolean
 ---@field undercurl? boolean
+---@field italic? boolean
 ---@field reverse? boolean
 ---@field link? Highlight
 
