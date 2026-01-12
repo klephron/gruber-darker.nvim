@@ -117,11 +117,11 @@ M["WildMenu"]         = Highlight.new("WildMenu", { fg = c["black"], bg = c["yel
 
 
 M["Comment"]        = Highlight.new("Comment", { fg = c["brown"], italic = cfg.italic.comment })
-M["Constant"]       = Highlight.new("Constant", { fg = c["quartz"], bold = cfg.bold })
+M["Constant"]       = Highlight.new("Constant", { fg = c["quartz"] })
 M["String"]         = Highlight.new("String", { fg = c["green"], italic = cfg.italic.string })
 M["Character"]      = Highlight.new("Character", { fg = c["green"], italic = cfg.italic.character })
 M["Number"]         = Highlight.new("Number", { fg = c["wisteria"] })
-M["Boolean"]        = Highlight.new("Boolean", { fg = c["wisteria"], bold = cfg.bold })
+M["Boolean"]        = Highlight.new("Boolean", { fg = c["wisteria"] })
 M["Float"]          = Highlight.new("Float", { fg = c["wisteria"] })
 M["Identifier"]     = Highlight.new("Identifier", { fg = c["fg"] })
 M["Function"]       = Highlight.new("Function", { fg = c["niagara"] })
