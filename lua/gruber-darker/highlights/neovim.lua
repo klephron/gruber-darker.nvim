@@ -47,8 +47,8 @@ M["LineNrBelow"]      = { link = "LineNr" }
 
 M["WinSeparator"]     = { fg = c["bg+2"], bold = o.bold }
 
-M["ErrorMsg"]         = { fg = c["red"] }
-M["WarningMsg"]       = { fg = c["yellow"] }
+M["ErrorMsg"]         = { fg = c["error"] }
+M["WarningMsg"]       = { fg = c["warn"] }
 
 M["Title"]            = { fg = c["quartz"] }
 
@@ -151,8 +151,9 @@ M["Underlined"]     = { underline = o.underline }
 M["Bold"]           = { bold = o.bold }
 M["Italic"]         = { italic = o.italic.text }
 
-M["Error"]          = { fg = c["red"] }
-M["Todo"]           = { fg = c["yellow"] }
+M["Error"]          = { fg = c["error"] }
+M["Todo"]           = { fg = c["todo"] }
+
 M["Added"]          = { fg = c["green"] }
 M["Changed"]        = { fg = c["yellow"] }
 M["Removed"]        = { fg = c["red"] }
@@ -162,13 +163,13 @@ M["Ignore"] =  {}
 --]]
 
 
-M["DiagnosticError"]       = { fg = c["red"], bold = o.bold }
-M["DiagnosticWarn"]        = { fg = c["yellow"], bold = o.bold }
-M["DiagnosticInfo"]        = { fg = c["niagara"], bold = o.bold }
-M["DiagnosticHint"]        = { fg = c["wisteria"], bold = o.bold }
-M["DiagnosticOk"]          = { sp = c["niagara"], underline = o.underline }
+M["DiagnosticError"]       = { fg = c["error"], bold = o.bold }
+M["DiagnosticWarn"]        = { fg = c["warn"], bold = o.bold }
+M["DiagnosticInfo"]        = { fg = c["info"], bold = o.bold }
+M["DiagnosticHint"]        = { fg = c["hint"], bold = o.bold }
+M["DiagnosticOk"]          = { sp = c["info"], underline = o.underline }
 M["DiagnosticDeprecated"]  = { sp = c["fg"], strikethrough = o.strikethrough }
-M["DiagnosticUnnecessary"] = { sp = c["wisteria"], underline = o.underline }
+M["DiagnosticUnnecessary"] = { sp = c["hint"], underline = o.underline }
 
 --[[
 M["DiagnosticVirtualTextError"]  =  {}

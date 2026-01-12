@@ -26,4 +26,10 @@ M["niagara-1"] = "#565f73"
 M["niagara"] = "#96a6c8"
 M["wisteria"] = "#9e95c7"
 
+M["error"] = M["red"]
+M["warn"] = M["yellow"]
+M["todo"] = M["yellow"]
+M["info"] = M["niagara"]
+M["hint"] = M["wisteria"]
+
 return M
